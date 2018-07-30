@@ -1,0 +1,5 @@
+steps:
+- name: 'vvakame/review:2.5'
+  args: ['rake', 'clean', 'pdf']
+  dir: 'articles'
+# images: ['vvakame/review:2.5']
