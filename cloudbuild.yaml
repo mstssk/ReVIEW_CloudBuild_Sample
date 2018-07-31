@@ -2,7 +2,10 @@ steps:
 - name: 'vvakame/review:2.5'
   args: ['rake', 'clean', 'pdf']
   dir: 'articles'
+- name: 'vvakame/review:2.5'
+  args: ['rake', 'web']
+  dir: 'articles'
 artifacts:
   objects:
     location: 'gs://review-cloudbuild-sample/$BUILD_ID'
-    paths: ['articles/*.pdf']
+    paths: ['articles/*.pdf', 'articles/webroot/**']
